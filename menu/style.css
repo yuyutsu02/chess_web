@@ -1,0 +1,147 @@
+*{
+    overflow: hidden;
+    
+}
+body{
+    
+    padding: 0px;
+    margin:0px;
+    background-color: darkcyan;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* top--------------------------------------------------------- */
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    background-color:darkcyan;
+}
+.square{
+    width: min(60vh,100vw);
+    height: min(60vh,100vw);
+    /* box-shadow: 0px 0px 21px 2px rgb(48, 138, 135) inset; */
+}
+
+
+
+/* top animation  */
+.whorse{
+    position:relative;
+    left: min(15vh,25vw) ;
+    top: min(15vh,25vw) ;
+    width: min(30vh,50vw);
+    height: min(30vh,50vw);
+    background-image: url(../images/whorse.png);
+    background-size: cover;
+    z-index: 10000000;
+    animation: motion 4s ease-in-out infinite ;
+}
+.bking{
+    position: relative;
+    bottom: min(15vh,25vw);
+    width: min(30vh,50vw);
+    height: min(30vh,50vw);
+    background-image: url(../images/bking.png);
+    background-size: cover;
+    animation: motion2 4s ease-in-out infinite ;
+    
+}
+.bqueen{
+    position: relative;
+    bottom: min(45vh,75vw);
+    left: min(30vh,50vw) ;
+    width: min(30vh,50vw);
+    height: min(30vh,50vw);
+    background-image: url(../images/bqueen.png);
+    background-size: cover;
+    animation: motion1 4s ease-in-out forwards infinite ;
+} 
+
+@keyframes motion {
+    0%{ top: min(15vh,25vw) ;}
+    25%{top: min(37.5vh,62.5vw) ;}
+    50%{top: min(15vh,25vw) ;}
+    75%{top: min(-7.5vh,-12.5vw) ;}
+    100%{top: min(15vh,25vw) ;}
+
+}
+@keyframes motion1 {
+    0%{bottom: min(45vh,75vw);}
+    25%{bottom: min(30vh,50vw);}
+    50%{bottom: min(45vh,75vw);}
+    75%{bottom: min(60vh,100vw);}
+    100%{bottom: min(45vh,75vw);}
+
+}
+@keyframes motion2 {
+    0%{bottom: min(15vh,25vw);}
+    25%{bottom: min(0vh,0vw);}
+    50%{bottom: min(15vh,25vw);}
+    75%{bottom: min(30vh,50vw);}
+    100%{bottom: min(15vh,25vw);}
+
+}
+
+
+/* middle------------------------------------------------------------ */
+.middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 35vh;
+    background-color:darkcyan;
+}
+.play{
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height:15vh ;
+    background-color:rgb(70, 203, 203);
+    font-size: xx-large;
+    border-radius: 15px;
+    transition: 300ms;
+    
+}
+.chess{
+    color: black;
+    text-decoration: none;
+    width: 60%;
+    height:15vh ;
+    background-color:rgb(70, 203, 203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    border-radius: 15px;
+    transition: 300ms;
+}
+.play:hover,.chess:hover{
+    cursor: pointer;
+    background-color:rgb(133, 255, 255);
+    
+
+}
+
+
+
+
+/* bottom----------------------------------------------------------- */
+.bottom{
+    width: 100%;
+    height: 5vh;
+    background-color:rgb(0, 103, 103);
+    font-size: larger;
+    font:bolder;
+    display: flex;
+    justify-content: center;
+}
